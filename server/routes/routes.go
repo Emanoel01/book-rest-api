@@ -1,7 +1,8 @@
 package routes
 
 import (
-	"gihub.com/Emanoel01/book-rest-api/src/controllers"
+	"book-rest-api/controllers"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -10,7 +11,9 @@ func ConfigRoutes(router *gin.Engine) *gin.Engine {
 	{
 		books := main.Group("books")
 		{
-			books.GET("/", controllers.ShowBook)
+			books.GET("/:id", controllers.ShowBook)
+			books.GET("/", controllers.ShowBooks)
+			books.POST("/", controllers.CreateBook)
 		}
 	}
 

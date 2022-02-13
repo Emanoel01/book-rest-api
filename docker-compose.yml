@@ -7,7 +7,7 @@ services:
     ports:
       - "1337:1337"
     extra_hosts:
-      - "host.docker.internal:172.17.0.1"
+      - "host.docker.internal:172.21.0.2"
 
   db:
     image: mysql:8.0
@@ -15,3 +15,5 @@ services:
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=1234
+    ports:
+      - "4002:3306"

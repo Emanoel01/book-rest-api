@@ -1,12 +1,13 @@
 package main
 
 import (
+	"book-rest-api/database"
+	"book-rest-api/server"
 	"fmt"
-
-	"gihub.com/Emanoel01/book-rest-api/src/server"
 )
 
 func main() {
+	database.StartDB()
 	server := server.NewServer()
 
 	fmt.Println("OLA MUNDO")

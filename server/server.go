@@ -1,9 +1,9 @@
 package server
 
 import (
+	"book-rest-api/server/routes"
 	"log"
 
-	"gihub.com/Emanoel01/book-rest-api/src/server/routes"
 	"github.com/gin-gonic/gin"
 )
 
